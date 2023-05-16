@@ -5,6 +5,7 @@
   <title>Blog | 박형진의 웹페이지</title>
   <!-- <link href="./practice.css" rel="stylesheet" type="text/css"> -->
   <link href="./bootstrap4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <script src="https://kit.fontawesome.com/3f20cbb4f7.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -29,12 +30,43 @@
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Log In</a>
+            <!-- Button trigger modal -->
+            <a class="nav-link" data-toggle="modal" data-target="#loginModal">Log In</a>
           </li>
         </ul>
+
+
+        
       </div>
     </div>
   </nav>
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel"><i class="fas fa-sign-in-alt"></i> Log In</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <button type="button" class="btn btn-outline-dark btn-sm btn-block"><i class="fab fa-google"></i> Log in with Google</button>
+              <button type="button" class="btn btn-outline-dark btn-sm btn-block"><i class="fas fa-id-card"></i> Log in with username</button>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <button type="button" class="btn btn-outline-dark btn-sm btn-block"><i class="fas fa-envelope"></i> Sign Up with E-mail</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container my-3">
     <div class="row">
       <!-- Blog entries-->
@@ -95,7 +127,9 @@
 
   <!-- Footer-->
   <footer class="py-3 bg-dark">
-    <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
